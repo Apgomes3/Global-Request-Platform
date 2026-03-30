@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Executive Canvas Palette */
+  --color-primary: #004277;
+  --color-primary-container: #005a9e;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #b1d1ff;
+  
+  --color-secondary: #605e5c;
+  --color-secondary-container: #e6e2df;
+  --color-on-secondary: #ffffff;
+  
+  --color-tertiary: #004279;
+  --color-tertiary-container: #005aa1;
+  
+  --color-background: #faf9f8;
+  --color-on-background: #1a1c1c;
+  
+  --color-surface: #faf9f8;
+  --color-on-surface: #1a1c1c;
+  --color-surface-variant: #e3e2e1;
+  --color-on-surface-variant: #414750;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f3f2;
+  --color-surface-container: #efeeed;
+  --color-surface-container-high: #e9e8e7;
+  --color-surface-container-highest: #e3e2e1;
+  
+  --color-outline: #727782;
+  --color-outline-variant: #c1c7d2;
+  
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  
+  /* Status Colors (Tonal) */
+  --color-status-sent-bg: #d3e3ff;
+  --color-status-sent-text: #004883;
+  --color-status-received-bg: #e6e2df;
+  --color-status-received-text: #484645;
+  --color-status-progress-bg: #d3e4ff;
+  --color-status-progress-text: #004881;
+  --color-status-completed-bg: #e0e7ff;
+  --color-status-completed-text: #1260a5;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans antialiased;
+  }
+}
+
+/* Custom Utilities for the Architectural Ledger aesthetic */
+@layer utilities {
+  .glass-header {
+    background: rgba(250, 249, 248, 0.8);
+    backdrop-filter: blur(20px);
+  }
+  
+  .architectural-shadow {
+    box-shadow: 0 8px 24px rgba(26, 28, 28, 0.06);
+  }
+  
+  .ghost-border {
+    @apply border border-outline-variant/15;
+  }
+}
